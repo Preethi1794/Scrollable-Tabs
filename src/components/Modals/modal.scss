@@ -1,0 +1,31 @@
+.modal-container {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  padding: 1em;
+  background-color: var(--primaryColor);
+  box-shadow: 0px 4px 4px rgba(80, 120, 242, 0.2);
+}
+
+.delete-alert {
+  top: 50%;
+}
+.max-length-alert {
+  top: 10%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  svg {
+    fill: #ffc627;
+    margin-right: 0.5em;
+  }
+}
+
+.button-wrapper {
+  margin-top: 2em;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    margin-left: 1em;
+  }
+}

@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import { Switch, Route } from "react-router-dom";
+import ScrollableTabs from "./components/ScrollableTabs/ScrollableTabs";
+import MainContainer from "./components/MainContainer";
+import { TabProvider } from "./contexts/TabContext";
+import Tab from "./components/ScrollableTabs/Tab";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="triangle"></div>
+      <div className="main-container">
+        <ScrollableTabs defaultTabs={3}>
+          <Tab key="1" name="Tab 1">
+            <p>first tab</p>
+          </Tab>
+          <Tab key="2" name="Tab 2">
+            <p>second tab</p>
+          </Tab>
+          <Tab key="3" name="Tab 3">
+            <p>third tab</p>
+          </Tab>
+        </ScrollableTabs>
+        {/* <Switch>
+          <Route exact path="/">
+            <MainContainer />
+          </Route>
+          <Route path="/tabs">
+            
+          </Route>
+        </Switch> */}
+      </div>
+    </>
   );
 }
 
