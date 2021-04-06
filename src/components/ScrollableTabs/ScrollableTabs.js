@@ -1,6 +1,5 @@
-import React, { useState, useContext, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MdAdd, MdChevronLeft, MdChevronRight } from "react-icons/md";
-import TabContext, { TabProvider } from "../../contexts/TabContext";
 import { Draggable } from "../Draggable/Draggable";
 import { findIndex } from "../Draggable/find-index";
 import move from "array-move";
@@ -73,7 +72,6 @@ function ScrollableTabs({ defaultTabs, children }) {
     tabContainerRef.current.scrollLeft += 150;
     setActiveElement(activeElement + 1);
   };
-  console.log(tabInfo);
 
   return (
     <div className="scrollable-tab-container">
@@ -105,7 +103,9 @@ function ScrollableTabs({ defaultTabs, children }) {
       </div>
       {children.length <= defaultTabs &&
         tabInfo[activeElement]?.key === children[activeElement]?.key && (
-          <div>{children[activeElement]?.props.children}</div>
+          <div className="tab-content">
+            {children[activeElement]?.props.children}
+          </div>
         )}
       {showMaxAlert && <LengthExceededAlert />}
     </div>

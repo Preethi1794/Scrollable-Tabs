@@ -31,6 +31,11 @@
 .tabs-holder {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.tab-content {
+  margin-top: 1rem;
 }
 
 .horizontal-list {
@@ -38,7 +43,6 @@
   overflow: hidden;
   list-style-type: none;
   padding: 0 1rem;
-  margin: 0 0 1rem 0;
   white-space: nowrap;
   li {
     font-size: 1em;

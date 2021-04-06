@@ -1,8 +1,5 @@
 import "./App.scss";
-import { Switch, Route } from "react-router-dom";
 import ScrollableTabs from "./components/ScrollableTabs/ScrollableTabs";
-import MainContainer from "./components/MainContainer";
-import { TabProvider } from "./contexts/TabContext";
 import Tab from "./components/ScrollableTabs/Tab";
 
 function App() {
@@ -21,14 +18,6 @@ function App() {
             <p>third tab</p>
           </Tab>
         </ScrollableTabs>
-        {/* <Switch>
-          <Route exact path="/">
-            <MainContainer />
-          </Route>
-          <Route path="/tabs">
-            
-          </Route>
-        </Switch> */}
       </div>
     </>
   );
